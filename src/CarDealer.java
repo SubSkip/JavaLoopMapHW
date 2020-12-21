@@ -3,6 +3,7 @@ import java.util.*;
 
 public class CarDealer {
     private String car;
+    private String make;
 
     HashMap<String, String> carsOnLot = new HashMap<String, String>();
 
@@ -22,9 +23,10 @@ public class CarDealer {
         System.out.println("Welcome to Harry's Happy Hoopties!");
         System.out.println("What model of vehicle are you looking for today?");
         car = whatCar.next();
+        make = carsOnLot.get(car);
         whatCar.close();
-        if (carsOnLot.containsValue(car)) {
-            System.out.printf("Great! Our %s models are right over here!", car);
+        if (carsOnLot.containsValue(make)) {
+            System.out.printf("Great! Our %s models are right over here!", make);
         } else
             System.out.printf("Sorry. We do not have any %s models. Check back soon!", car);
     }

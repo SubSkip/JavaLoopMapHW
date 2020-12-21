@@ -2,7 +2,7 @@
 import java.util.*;
 
 public class LoopMaps {
-    private int sum;
+    private int sum = 0;
     private int product = 1; // Need to set product to 1 for multiplication
 
     List<Integer> numbers = new ArrayList<>();
